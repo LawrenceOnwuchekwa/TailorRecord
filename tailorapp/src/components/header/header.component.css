@@ -1,0 +1,26 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    background-color: antiquewhite;
+  }
+.example-spacer{
+    flex: 1 1 auto;
+}
+.toolbar-icon{
+  display: none;
+}
+
+/* Small screens (phones, less than 600px) */
+@media (max-width: 599px) {
+  mat-toolbar{
+    display: flex;
+  }
+  .home, .signup, .login, .example-spacer{
+    display: none;
+  }
+  .toolbar-icon{
+    display: block;
+  }
+}
