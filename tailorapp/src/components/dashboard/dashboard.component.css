@@ -1,0 +1,18 @@
+.mat-drawer-container {
+    height: 100vh; /* Ensure it takes full viewport height */
+  }
+  
+  .mat-drawer-content {
+    padding: 16px; /* Optional padding */
+  }
+  
+  mat-drawer {
+    width: 250px; /* Width of the side drawer */
+    border-right: 4px solid whitesmoke;
+  }
+    @media(max-width: 600px) {
+      .mat-drawer{
+        width:190px;
+        
+      }
+    }

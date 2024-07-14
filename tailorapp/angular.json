@@ -68,7 +68,8 @@
               "buildTarget": "tailorapp:build:production"
             },
             "development": {
-              "buildTarget": "tailorapp:build:development"
+              "buildTarget": "tailorapp:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

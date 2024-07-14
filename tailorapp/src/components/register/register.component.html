@@ -1,0 +1,23 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="username">Username</label>
+    <input id="username" formControlName="username">
+    <div *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+      <div *ngIf="username?.errors?.['required']">Username is required.</div>
+      <div *ngIf="username?.errors?.['minlength']">Username must be at least 3 characters long.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" formControlName="password">
+    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      <div *ngIf="password?.errors?.['required']">Password is required.</div>
+      <div *ngIf="password?.errors?.['minlength']">Password must be at least 8 characters long.</div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+</form>
+<!-- <div *ngIf="errorMessage$ | async as errorMessage" class="error-message">
+  {{ errorMessage }}
+</div> -->

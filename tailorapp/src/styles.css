@@ -1,5 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.error-snackbar {
+    background-color: #f44336; /* Red background for error */
+    color: white; /* White text color */
+    font-size: 14px; /* Font size */
+  }
+
+  @media screen and (max-width: 600px) {
+    .error-snackbar {
+      max-width: 100%; /* Full width on smaller screens */
+      margin: 0; /* Remove margins */
+      border-radius: 0; /* Remove border radius */
+      font-size: 12px; /* Smaller font size for better readability */
+      padding: 8px; /* Adjust padding for compactness */
+    }
+  }
